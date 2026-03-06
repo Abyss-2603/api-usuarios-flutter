@@ -1,7 +1,10 @@
 const express = require('express');
 const { db } = require('@vercel/postgres');
+const cors = require('cors');
+
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 // 1. ENDPOINT GET: Para leer los usuarios de la DB
